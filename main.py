@@ -5,6 +5,7 @@ import json
 location = "us"
 server = "Zul'Jin"
 toon_name = "konnenh"
+total_num_dungeons = 10
 
 best_runs = requests.get(f"https://raider.io/api/v1/characters/profile?region={location}&realm={server}&name={toon_name}&fields=mythic_plus_best_runs")
 best_runs_data = best_runs.text
@@ -18,7 +19,7 @@ best_alt_runs_parsed_json = json.loads(best_alt_runs_data)
 best_alt_scores = []
 best_alt_dungeons = []
 
-for i in range(10):
+for i in range(total_num_dungeons):
 
     best_score = best_runs_parsed_json["mythic_plus_best_runs"][i]["score"]
     best_scores.append(best_score)
