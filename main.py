@@ -1,6 +1,26 @@
 import requests
 import json
 
+def time_bonus_calculator(par_time, completion_time):
+    if completion_time>par_time:
+        return
+    elif completion_time==par_time:
+        return 0
+    elif completion_time<=0.6*par_time:
+        return 7.5
+    else:
+        x1, y1 = par_time, 0
+        x2, y2 = 0.6*par_time, 7.5
+        slope = (y2-y1)/(x2-x1)
+        score = slope*completion_time + 18.75
+        return score
+        
+# print(time_bonus_calculator(1000,1400))
+# print(time_bonus_calculator(1000,1000))
+# print(time_bonus_calculator(1000,600))
+# print(time_bonus_calculator(1000,500))
+# print(time_bonus_calculator(1000,800))
+
 # Character info
 location = "us"
 server = "Zul'Jin"
