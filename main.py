@@ -39,6 +39,7 @@ best_alt_runs_parsed_json = json.loads(best_alt_runs_data)
 best_alt_scores = []
 best_alt_dungeons = []
 
+# Appends necessary info for score calculation
 for i in range(total_num_dungeons):
 
     best_score = best_runs_parsed_json["mythic_plus_best_runs"][i]["score"]
