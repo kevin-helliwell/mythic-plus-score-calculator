@@ -1,6 +1,12 @@
 import requests
 import json
 
+# Pull best/alt runs from API
+# Get base score, dungeon, time bonus/penalty score
+# Add base score and time bonus/penalty score
+# Create dict with key/value pair of dungeon/score
+# Add scores together to get total score
+
 def time_bonus_calculator(par_time, completion_time):
     if completion_time>par_time:
         return
