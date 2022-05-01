@@ -20,12 +20,6 @@ def time_bonus_calculator(par_time, completion_time):
         slope = (y2-y1)/(x2-x1)
         score = slope*completion_time + 18.75
         return score
-        
-# print(time_bonus_calculator(1000,1400))
-# print(time_bonus_calculator(1000,1000))
-# print(time_bonus_calculator(1000,600))
-# print(time_bonus_calculator(1000,500))
-# print(time_bonus_calculator(1000,800))
 
 # Character info
 location = "us"
