@@ -71,4 +71,3 @@ for i in range(len(best_dungeons)):
     total_score+=best_score+alt_score
 
 print(total_score)
-
